@@ -87,7 +87,7 @@
     "validEmail": "Must be a valid email",
     "passwordMinLength": "Password must be at least 6 characters",
     "passwordMaxLength": "Password must be at most 40 characters",
-    "confirmPasswordRequired": "Confirm Password is required",
+    "confirmPasswordRequired": "Confirm Password is required ",
     "passwordMismatch": "Password do not match"
   },
   "messages": {
@@ -97,10 +97,10 @@
     "unexpectedError": "An unexpected error occurred",
     "userAlreadyExists": "User already exists.",
     "accountCreated": "Account created successfully",
-    "updateProfileSucess": "Profile updated successfull",
+    "updateProfileSuccess": "Profile updated successfull",
     "categoryAdded": "Category added successfully",
-    "updatecategorySucess": "Category updated successfull",
-    "deleteCategorySucess": "Category deleted successfull",
+    "updatecategorySuccess": "Category updated successfull",
+    "deleteCategorySuccess": "Category deleted successfull",
     "productAdded": "Product added successfully",
     "updateProductSucess": "Product updated successfull",
     "deleteProductSucess": "Product deleted successfull",
@@ -171,6 +171,7 @@
     "categories": {
       "form": {
         "editName": "Change Category Name",
+        "desc": "Make changes to your categories here. Click save when you’re done.",
         "name": {
           "label": "Category Name",
           "placeholder": "Enter category name",
@@ -178,6 +179,11 @@
             "required": "Category Name is required"
           }
         }
+      },
+      "deleteCategory": {
+        "title": "Delete Category",
+        "desc": "You can delete your categories here. Click the delete button when you're sure.",
+        "warning": "Do you want to delete this category?" 
       }
     },
     "menu-items": {

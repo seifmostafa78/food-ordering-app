@@ -14,13 +14,12 @@ export type CartItem = {
 
 type CartState = {
   items: CartItem[];
+  isLoaded: boolean;
 };
-
-// const initialCartItems = localStorage.getItem('cartItems');
-// initialCartItems ? JSON.parse(initialCartItems) : 
 
 const initialState: CartState = {
   items: [],
+  isLoaded: false,
 };
 
 const cartSlice = createSlice({
@@ -57,11 +56,19 @@ const cartSlice = createSlice({
     clearCart: (state) => {
       state.items = [];
     },
+    loadCartFromStorage: (state, action: PayloadAction<CartItem[]>) => {
+      state.items = action.payload;
+      state.isLoaded = true;
+    },
   },
 });
 
-export const { addCartItem, removeCartItem, removeItemFromCart } =
-  cartSlice.actions;
+export const {
+  addCartItem,
+  removeCartItem,
+  removeItemFromCart,
+  loadCartFromStorage,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;
 

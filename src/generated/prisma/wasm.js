@@ -128,8 +128,40 @@ exports.Prisma.UserScalarFieldEnum = {
   postalCode: 'postalCode',
   city: 'city',
   country: 'country',
+  role: 'role',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
+};
+
+exports.Prisma.SessionScalarFieldEnum = {
+  id: 'id',
+  sessionToken: 'sessionToken',
+  userId: 'userId',
+  expires: 'expires'
+};
+
+exports.Prisma.VerificationRequestScalarFieldEnum = {
+  id: 'id',
+  identifier: 'identifier',
+  token: 'token',
+  expires: 'expires',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.AccountScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  type: 'type',
+  provider: 'provider',
+  providerAccountId: 'providerAccountId',
+  refresh_token: 'refresh_token',
+  access_token: 'access_token',
+  expires_at: 'expires_at',
+  token_type: 'token_type',
+  scope: 'scope',
+  id_token: 'id_token',
+  session_state: 'session_state'
 };
 
 exports.Prisma.ProductScalarFieldEnum = {
@@ -202,6 +234,11 @@ exports.Prisma.NullsOrder = {
   first: 'first',
   last: 'last'
 };
+exports.UserRole = exports.$Enums.UserRole = {
+  USER: 'USER',
+  ADMIN: 'ADMIN'
+};
+
 exports.ProductSizes = exports.$Enums.ProductSizes = {
   SMALL: 'SMALL',
   MEDIUM: 'MEDIUM',
@@ -218,6 +255,9 @@ exports.ExtraIngredients = exports.$Enums.ExtraIngredients = {
 
 exports.Prisma.ModelName = {
   User: 'User',
+  Session: 'Session',
+  VerificationRequest: 'VerificationRequest',
+  Account: 'Account',
   Product: 'Product',
   Size: 'Size',
   Extra: 'Extra',

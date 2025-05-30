@@ -88,10 +88,10 @@ export type Translations = {
     unexpectedError: string;
     userAlreadyExists: string;
     accountCreated: string;
-    updateProfileSucess: string;
+    updateProfileSuccess: string;
     categoryAdded: string;
-    updatecategorySucess: string;
-    deleteCategorySucess: string;
+    updatecategorySuccess: string;
+    deleteCategorySuccess: string;
     productAdded: string;
     updateProductSucess: string;
     deleteProductSucess: string;
@@ -125,6 +125,7 @@ export type Translations = {
     categories: {
       form: {
         editName: string;
+        desc: string;
         name: {
           label: string;
           placeholder: string;
@@ -132,6 +133,11 @@ export type Translations = {
             required: string;
           };
         };
+      };
+      deleteCategory: {
+        title: string;
+        desc: string;
+        warning: string;
       };
     };
     "menu-items": {

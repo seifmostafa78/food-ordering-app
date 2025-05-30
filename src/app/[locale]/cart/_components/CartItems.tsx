@@ -2,18 +2,39 @@
 
 import { deliveryFee, getSubTotal } from "@/lib/cart";
 import { formatCurrency } from "@/lib/formatters";
-import { selectCartItems } from "@/redux/features/cart/cartSlice";
-import { useAppSelector } from "@/redux/hooks";
+import {
+  loadCartFromStorage,
+  selectCartItems,
+} from "@/redux/features/cart/cartSlice";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import CartItem from "./CartItem";
-// import { useEffect } from "react";
+import { useEffect } from "react";
+import Loader from "@/components/ui/Loader";
 
 function CartItems() {
   const cart = useAppSelector(selectCartItems);
   const subTotal = getSubTotal(cart);
+  const isLoaded = useAppSelector((state) => state.cart.isLoaded);
+  const dispatch = useAppDispatch();
 
-  // useEffect(() => {
-  //   localStorage.setItem("cartItems", JSON.stringify(cart));
-  // }, [cart]);
+  useEffect(() => {
+    const storedItems = localStorage.getItem("cartItems");
+    if (storedItems) {
+      dispatch(loadCartFromStorage(JSON.parse(storedItems)));
+    } else {
+      dispatch(loadCartFromStorage([]));
+    }
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (isLoaded) {
+      localStorage.setItem("cartItems", JSON.stringify(cart));
+    }
+  }, [cart, isLoaded]);
+
+  if (!isLoaded) {
+    return <Loader />;
+  }
 
   return (
     <div>

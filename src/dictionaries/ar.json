@@ -87,7 +87,7 @@
     "validEmail": "يجب أن يكون بريد إلكتروني صالح",
     "passwordMinLength": "يجب أن تكون كلمة المرور على الأقل 6 أحرف",
     "passwordMaxLength": "يجب أن تكون كلمة المرور على الأكثر 40 حرفًا",
-    "confirmPasswordRequired": "تأكيد كلمة المرور مطلوب",
+    "confirmPasswordRequired": "تأكيد كلمة المرور مطلوب، ",
     "passwordMismatch": "كلمة المرور غير متطابقة"
   },
   "messages": {
@@ -97,10 +97,10 @@
     "unexpectedError": "حدث خطأ غير متوقع",
     "userAlreadyExists": "المستخدم موجود بالفعل",
     "accountCreated": "تم إنشاء الحساب بنجاح",
-    "updateProfileSucess": "تم تحديث الملف الشخصي بنجاح",
+    "updateProfileSuccess": "تم تحديث الملف الشخصي بنجاح",
     "categoryAdded": "تم اضافة الفئة بنجاح",
-    "updatecategorySucess": "تم تحديث الفئة بنجاح",
-    "deleteCategorySucess": "تم حذف الفئة بنجاح",
+    "updatecategorySuccess": "تم تحديث الفئة بنجاح",
+    "deleteCategorySuccess": "تم حذف الفئة بنجاح",
     "productAdded": "تم اضافة المنتج بنجاح",
     "updateProductSucess": "تم تحديث المنتج بنجاح",
     "deleteProductSucess": "تم حذف المنتج بنجاح",
@@ -171,6 +171,7 @@
     "categories": {
       "form": {
         "editName": "تعديل اسم الفئة",
+        "desc": "يمكنك تعديل الفئات الخاصة بك هنا. اضغط على حفظ عند الانتهاء",
         "name": {
           "label": "اسم الفئة",
           "placeholder": "أدخل اسم الفئة",
@@ -178,6 +179,11 @@
             "required": "اسم الفئة مطلوب"
           }
         }
+      },
+      "deleteCategory": {
+        "title": "حذف الفئة",
+        "desc": "يمكنك حذف الفئات الخاصة بك هنا. انقر على زر الحذف عندما تكون متأكدًا.",
+        "warning": "هل تريد حذف هذه الفئة؟"
       }
     },
     "menu-items": {
